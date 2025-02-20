@@ -3,7 +3,7 @@ import ShowHistoryPage from "./components/ShowHistoryPage";
 import AdminPanel from "./pages/admin";
 import Raghib from "./pages/Raghib";
 import Single from "./pages/Single";
-import { ToastContainer } from "@cred/neopop-web/lib/components";
+
 import ChatApp from "./pages/ChatApp";
 import ChatApp2 from "./pages/ChatApp2";
 import Chat25k from "./pages/Chat25k";
@@ -44,7 +44,7 @@ function App() {
   }, []);
   return (
     <div>
-      <ToastContainer />
+   
       <BrowserRouter>
         <Routes>
           {/* <Route path="/engchat1" element={<ChatApp />} /> */}
