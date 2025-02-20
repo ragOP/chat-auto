@@ -873,7 +873,7 @@ useEffect(() => {
           </h1>
           <div className="sub-text">
             <div className="pulse"></div>
-            Emily this side, and I've got great news about an Auto Insurance Program that could save you serious cash! 
+            Emily is Here to Help You Save!
           </div>
         </div>
 

@@ -47,8 +47,8 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path="/engchat1" element={<ChatApp />} />
-          <Route path="/engchat25k" element={<Chat25k />} />
+          {/* <Route path="/engchat1" element={<ChatApp />} /> */}
+          {/* <Route path="/engchat25k" element={<Chat25k />} /> */}
           <Route path="/auto" element={<ChatAuto />} />
 
           <Route path="/terms" element={<Terms />} />
