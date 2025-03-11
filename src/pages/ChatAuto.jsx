@@ -953,8 +953,7 @@ useEffect(() => {
               <div className="chat-notification">
                 <p className="chat-notification-message">
                   Tap on the button below to make a quick call & that's it.
-                  You'll be qualified on the call by a licensed agent in
-                  minutes.
+                 After the IVR, you'll be qualified on the call by a licensed agent in minutes.
                 </p>
               </div>
               <button className="button1">
