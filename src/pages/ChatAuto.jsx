@@ -783,30 +783,68 @@ useEffect(() => {
   //   }, 100)
   // }, [chat]);
 
-  const handleShowOptions = (answer) => {
-    setShowOptions(false);
+  // const handleShowOptions = (answer) => {
+    
+  //   setShowOptions(false);
 
-    const userContent =
-      answer === "yes" ? "YES" : "NO";
+  //   const userContent =
+  //     answer === "yes" ? "YES" : "NO";
+  //   setChat((prev) => [
+  //     ...prev,
+  //     { id: "user-2", content: userContent, role: "user" },
+  //   ]);
+
+  //   setIsTyping(true);
+  //   setTimeout(() => {
+  //     setChat((prev) => [
+  //       ...prev,
+  //       {
+  //         id: "assistant-6",
+  //         content: "Do you live in the United States?",
+  //         role: "assistant",
+  //       },
+  //     ]);
+  //     setIsTyping(false);
+  //     setShowOptions2(true);
+  //   }, 1000);
+  // };
+
+const handleShowOptions = (answer) => {
+  setShowOptions(false);
+
+  const userContent = answer === "yes" ? "YES" : "NO";
+  setChat((prev) => [
+    ...prev,
+    { id: "user-2", content: userContent, role: "user" },
+  ]);
+
+
+  const insuredValue = answer === "yes" ? "Yes" : "No";
+
+  // Push to Ringba
+  window._rgba_tags = window._rgba_tags || [];
+  window._rgba_tags.push({
+    "insured": insuredValue,
+  });
+  console.log('Current Ringba Tags:', window._rgba_tags);
+  console.log('Latest Insured Tag Added:', { "insured": insuredValue });
+
+  setIsTyping(true);
+  setTimeout(() => {
     setChat((prev) => [
       ...prev,
-      { id: "user-2", content: userContent, role: "user" },
+      {
+        id: "assistant-6",
+        content: "Do you live in the United States?",
+        role: "assistant",
+      },
     ]);
+    setIsTyping(false);
+    setShowOptions2(true);
+  }, 1000);
+};
 
-    setIsTyping(true);
-    setTimeout(() => {
-      setChat((prev) => [
-        ...prev,
-        {
-          id: "assistant-6",
-          content: "Do you live in the United States?",
-          role: "assistant",
-        },
-      ]);
-      setIsTyping(false);
-      setShowOptions2(true);
-    }, 1000);
-  };
+
 
   const handleShowOptions2 = (answer) => {
     setShowOptions2(false);
